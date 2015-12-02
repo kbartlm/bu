@@ -1,0 +1,16 @@
+.container
+  .page-header
+    = link_to banks_path, :class => 'btn btn-default' do
+      %span.glyphicon.glyphicon-list-alt
+      Back
+    = link_to edit_bank_path(@bank), :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-pencil
+      Edit
+    %h1 Show bank
+
+  %dl.dl-horizontal
+    %dt Bankname:
+    %dd= @bank.bankName
+    %dt Banknumber:
+    %dd= @bank.bankNumber
+

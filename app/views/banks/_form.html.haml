@@ -1,0 +1,4 @@
+= form_for @bank, layout: :horizontal do |f|
+  = f.text_field :bankName, :class => 'form-control'
+  = f.text_field :bankNumber, :class => 'form-control'
+  = f.submit :class => 'btn btn-primary'

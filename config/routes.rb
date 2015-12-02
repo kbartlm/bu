@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :banks
   get 'welcome/index'
 
   namespace :admin do
