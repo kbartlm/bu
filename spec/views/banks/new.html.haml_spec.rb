@@ -4,7 +4,8 @@ RSpec.describe "banks/new", type: :view do
   before(:each) do
     assign(:bank, Bank.new(
       :bankName => "MyString",
-      :bankNumber => "MyString"
+      :bankNumber => "MyString",
+      :user => nil
     ))
   end
 
@@ -16,6 +17,8 @@ RSpec.describe "banks/new", type: :view do
       assert_select "input#bank_bankName[name=?]", "bank[bankName]"
 
       assert_select "input#bank_bankNumber[name=?]", "bank[bankNumber]"
+
+      assert_select "input#bank_user_id[name=?]", "bank[user_id]"
     end
   end
 end

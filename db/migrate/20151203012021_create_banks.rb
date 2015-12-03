@@ -3,6 +3,7 @@ class CreateBanks < ActiveRecord::Migration
     create_table :banks do |t|
       t.string :bankName
       t.string :bankNumber
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end

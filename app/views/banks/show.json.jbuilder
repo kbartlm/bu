@@ -1,1 +1,1 @@
-json.extract! @bank, :id, :bankName, :bankNumber, :created_at, :updated_at
+json.extract! @bank, :id, :bankName, :bankNumber, :user_id, :created_at, :updated_at

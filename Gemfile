@@ -79,3 +79,5 @@ gem 'devise_invitable'
 gem 'activeadmin', github: 'activeadmin', branch: 'master'
 gem 'inherited_resources'
 gem 'dateslices'
+
+gem 'rufus-scheduler'

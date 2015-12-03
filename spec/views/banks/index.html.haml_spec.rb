@@ -5,11 +5,13 @@ RSpec.describe "banks/index", type: :view do
     assign(:banks, [
       Bank.create!(
         :bankName => "Bank Name",
-        :bankNumber => "Bank Number"
+        :bankNumber => "Bank Number",
+        :user => nil
       ),
       Bank.create!(
         :bankName => "Bank Name",
-        :bankNumber => "Bank Number"
+        :bankNumber => "Bank Number",
+        :user => nil
       )
     ])
   end
@@ -18,5 +20,6 @@ RSpec.describe "banks/index", type: :view do
     render
     assert_select "tr>td", :text => "Bank Name".to_s, :count => 2
     assert_select "tr>td", :text => "Bank Number".to_s, :count => 2
+    assert_select "tr>td", :text => nil.to_s, :count => 2
   end
 end

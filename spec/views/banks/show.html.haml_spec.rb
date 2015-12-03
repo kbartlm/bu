@@ -4,7 +4,8 @@ RSpec.describe "banks/show", type: :view do
   before(:each) do
     @bank = assign(:bank, Bank.create!(
       :bankName => "Bank Name",
-      :bankNumber => "Bank Number"
+      :bankNumber => "Bank Number",
+      :user => nil
     ))
   end
 
@@ -12,5 +13,6 @@ RSpec.describe "banks/show", type: :view do
     render
     expect(rendered).to match(/Bank Name/)
     expect(rendered).to match(/Bank Number/)
+    expect(rendered).to match(//)
   end
 end

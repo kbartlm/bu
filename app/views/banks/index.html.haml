@@ -11,6 +11,7 @@
         %tr
           %th Bankname
           %th Banknumber
+          %th User
           %th
           %th
           %th
@@ -20,6 +21,7 @@
           %tr
             %td= bank.bankName
             %td= bank.bankNumber
+            %td= bank.user
             %td= link_to 'Show', bank
             %td= link_to 'Edit', edit_bank_path(bank)
             %td= link_to 'Destroy', bank, :data => { confirm: 'Are you sure?' }, :method => :delete
